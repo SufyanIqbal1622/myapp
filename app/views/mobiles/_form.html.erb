@@ -1,0 +1,82 @@
+<%= form_with(model: mobile) do |form| %>
+  <% if mobile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mobile.errors.count, "error") %> prohibited this mobile from being saved:</h2>
+
+      <ul>
+        <% mobile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file? %>
+    <%= form.text_field :file? %>
+  </div>
+
+  <div class="field">
+    <%= form.label :and %>
+    <%= form.text_field :and %>
+  </div>
+
+  <div class="field">
+    <%= form.label :present? %>
+    <%= form.text_field :present? %>
+  </div>
+
+  <div class="field">
+    <%= form.label :checks %>
+    <%= form.text_field :checks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :if %>
+    <%= form.text_field :if %>
+  </div>
+
+  <div class="field">
+    <%= form.label :the %>
+    <%= form.text_field :the %>
+  </div>
+
+  <div class="field">
+    <%= form.label :_file_name %>
+    <%= form.text_field :_file_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :field %>
+    <%= form.text_field :field %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is %>
+    <%= form.text_field :is %>
+  </div>
+
+  <div class="field">
+    <%= form.label :populated %>
+    <%= form.text_field :populated %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

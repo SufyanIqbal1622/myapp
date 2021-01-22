@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mobiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Model</th>
+      <th>File?</th>
+      <th>And</th>
+      <th>Present?</th>
+      <th>Checks</th>
+      <th>If</th>
+      <th>The</th>
+      <th>File name</th>
+      <th>Field</th>
+      <th>Is</th>
+      <th>Populated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobiles.each do |mobile| %>
+      <tr>
+        <td><%= mobile.name %></td>
+        <td><%= mobile.company %></td>
+        <td><%= mobile.model %></td>
+        <td><%= mobile.file? %></td>
+        <td><%= mobile.and %></td>
+        <td><%= mobile.present? %></td>
+        <td><%= mobile.checks %></td>
+        <td><%= mobile.if %></td>
+        <td><%= mobile.the %></td>
+        <td><%= mobile._file_name %></td>
+        <td><%= mobile.field %></td>
+        <td><%= mobile.is %></td>
+        <td><%= mobile.populated %></td>
+        <td><%= link_to 'Show', mobile %></td>
+        <td><%= link_to 'Edit', edit_mobile_path(mobile) %></td>
+        <td><%= link_to 'Destroy', mobile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobile', new_mobile_path %>
